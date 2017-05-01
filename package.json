@@ -1,0 +1,23 @@
+{
+  "name": "qc-type_of",
+  "version": "0.0.0",
+  "description": "A more useful alternative to `typeof <value>`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypersoftllc/qc-type_of.git"
+  },
+  "keywords": [
+    "javascript",
+    "typeof"
+  ],
+  "author": "Danny Hurlburt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hypersoftllc/qc-type_of/issues"
+  },
+  "homepage": "https://github.com/hypersoftllc/qc-type_of#readme"
+}
