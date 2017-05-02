@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/hypersoftllc/qc-type_of/issues"
   },
-  "homepage": "https://github.com/hypersoftllc/qc-type_of#readme"
+  "homepage": "https://github.com/hypersoftllc/qc-type_of#readme",
+  "devDependencies": {
+    "webpack": "^2.4.1"
+  }
 }
