@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hypersoftllc/qc-type_of#readme",
   "devDependencies": {
+    "typescript": "^2.3.2",
     "webpack": "^2.4.1"
   }
 }
