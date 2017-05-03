@@ -5,7 +5,8 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest --color --coverage"
+    "test": "jest --color --coverage",
+    "travisci": "npm test"
   },
   "repository": {
     "type": "git",
