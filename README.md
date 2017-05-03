@@ -2,6 +2,8 @@
 
 Yet another NPM package to improve upon JavaScript's `typeof` operator.
 
+[![Build Status](https://travis-ci.org/hypersoftllc/qc-type_of.svg?branch=master)](https://travis-ci.org/hypersoftllc/qc-type_of)
+
 **Note**: This package is written in [TypeScript] and so will need to be transpiled into JavaScript.  This does not
 mean that it can't be used with a [JavaScript] or [CoffeeScript] -based project.
 
