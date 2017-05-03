@@ -18,6 +18,9 @@
   ],
   "author": "Danny Hurlburt",
   "license": "ISC",
+  "files": [
+    "src/index.ts"
+  ],
   "bugs": {
     "url": "https://github.com/hypersoftllc/qc-type_of/issues"
   },
