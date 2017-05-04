@@ -1,31 +1,34 @@
 {
   "name": "qc-type_of",
   "version": "0.0.0",
+  "author": {
+    "name": "Danny Hurlburt",
+    "url": "https://github.com/dhurlburtusa"
+  },
   "description": "A more useful alternative to `typeof <value>`",
-  "main": "src/index.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "jest --color --coverage",
-    "travisci": "npm test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hypersoftllc/qc-type_of.git"
-  },
   "keywords": [
     "javascript",
     "typeof",
     "typescript"
   ],
-  "author": "Danny Hurlburt",
+  "homepage": "https://github.com/hypersoftllc/qc-type_of#readme",
+  "bugs": {
+    "url": "https://github.com/hypersoftllc/qc-type_of/issues"
+  },
   "license": "ISC",
   "files": [
     "src/index.ts"
   ],
-  "bugs": {
-    "url": "https://github.com/hypersoftllc/qc-type_of/issues"
+  "main": "src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypersoftllc/qc-type_of.git"
   },
-  "homepage": "https://github.com/hypersoftllc/qc-type_of#readme",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --color --coverage",
+    "travisci": "npm test"
+  },
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
