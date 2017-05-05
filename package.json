@@ -20,6 +20,7 @@
     "src/index.ts"
   ],
   "main": "src/index.ts",
+  "typings": "src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hypersoftllc/qc-type_of.git"
