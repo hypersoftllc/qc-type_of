@@ -4,21 +4,20 @@
  * Returns the type of the specified value as a string.  The list of possible types are:
  *
  * - `'arguments'`: If the specified value is a function Arguments object.
- * - `'array'`: If the specified value is an array.
  * - `'boolean'`: If the specified value is a boolean value.
- * - `'date'`: If the specified value is a `Date` object.
  * - `'function'`: If the specified value is a function reference.  This includes generator functions.
  * - `'infinity'`: If the specified value is `Infinity`, `Number.NEGATIVE_INFINITY`, or `Number.POSITIVE_INFINITY`.
  * - `'nan'`: If the specified value is `NaN`.
  * - `'null'`: If the specified value is `null`.
  * - `'number'`: If the specified value is a number.
  * - `'object'`: If the specified value is an object.
- * - `'regexp'`: If the specified value is a regular expression.
  * - `'string'`: If the specified value is a string.
  * - `'symbol'`: If the specified value is a symbol (ES6).
  * - `'undefined'`: If the specified value is `undefined`.
  * - `'undetermined'`: If the specified value has an undetermined type.  If this ever happens, then update this function
  *   to appropriately handle the value.
+ *
+ * If `'object'` is returned, then the `instanceof` operator can be used to narrow down the type.
  *
  * **Example Usage:**
  *
@@ -27,46 +26,53 @@
  *   typeOf(arguments);  // 'arguments'
  * })();
  *
- * typeof [];  // 'object'
- * typeOf([]);  // 'array' instead of 'object'
+ * typeOf([]);  // 'object'
+ *
+ * typeof new Boolean(...);  // 'object'
+ * typeOf(new Boolean(...));  // 'boolean' instead of 'object'
  *
  * typeOf(true);  // 'boolean'
  *
- * typeof new Date();  // 'object'
- * typeOf(new Date());  // 'date' instead of 'object'
+ * typeOf(new Date());  // 'object'
  *
  * typeOf(function () {});  // 'function'
  *
  * typeof Infinity;  // 'number'
  * typeOf(Infinity);  // 'infinity' instead of 'number'
  *
+ * typeof Number.NEGATIVE_INFINITY;  // 'number'
+ * typeOf(Number.NEGATIVE_INFINITY);  // 'infinity' instead of 'number'
+ *
  * typeof NaN;  // 'number'
  * typeOf(NaN);  // 'nan' instead of 'number'
  *
  * typeof null;  // 'object'
- * typeOf(null);  // 'null'
+ * typeOf(null);  // 'null' instead of 'object'
+ *
+ * typeof new Number(...);  // 'object'
+ * typeOf(new Number(...));  // 'number' instead of 'object'
  *
  * typeOf(1234);  // 'number'
  *
  * typeOf({});  // 'object'
  *
- * typeof /regexp/;  // 'object'
- * typeOf(/regexp/);  // 'regexp' instead of 'object'
+ * typeof new String(...);  // 'object'
+ * typeOf(new String(...));  // 'string' instead of 'object'
  *
  * typeOf('');  // 'string'
  *
  * typeOf();  // 'undefined'
  * ```
  *
+ * P.S.
+ *
+ * Never use `new Boolean`, `new Number`, or `new String` in the first place.
+ *
  * @param {?*} value - The value to determine the type of.
  *
  * @return {string} The type of the specified value.
  */
 function typeOf(value?: any): string {
-  /*
-   * Dependencies:
-   * - Core JS API.
-   */
   let typeOfValue: string, typeToString: string;
 
   if (value === null) {
@@ -84,10 +90,6 @@ function typeOf(value?: any): string {
   switch (typeToString) {
   case '[object Arguments]':
     return 'arguments';
-  case '[object Array]':
-    return 'array';
-  case '[object Date]':
-    return 'date';
   case '[object Boolean]':
     return 'boolean';
   case '[object Number]':
@@ -100,8 +102,6 @@ function typeOf(value?: any): string {
       return 'nan';
     }
     return 'number';
-  case '[object RegExp]':
-    return 'regexp';
   case '[object String]':
     return 'string';
   }

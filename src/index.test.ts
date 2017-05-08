@@ -14,14 +14,14 @@ describe('qc-type_of', () => {
       expect(result).toBe('arguments');
     });
 
-    it('called with an empty array should return `"array"`', () => {
+    it('called with an empty array should return `"object"`', () => {
       let result = typeOf([]);
-      expect(result).toBe('array');
+      expect(result).toBe('object');
     });
 
-    it('called with `Array` object should return `"array"`', () => {
+    it('called with `Array` object should return `"object"`', () => {
       let result = typeOf(new Array('one', 'two', 'etc'));
-      expect(result).toBe('array');
+      expect(result).toBe('object');
     });
 
     it('called with `false` should return `"boolean"`', () => {
@@ -40,9 +40,9 @@ describe('qc-type_of', () => {
       expect(result).toBe('boolean');
     });
 
-    it('called with a date should return `"date"`', () => {
+    it('called with a date should return `"object"`', () => {
       let result = typeOf(new Date());
-      expect(result).toBe('date');
+      expect(result).toBe('object');
     });
 
     it('called with an `Error` object should return `"object"`', () => {
@@ -157,14 +157,14 @@ describe('qc-type_of', () => {
       expect(result).toBe('number');
     });
 
-    it('called with a regular expression should return `"regexp"`', () => {
+    it('called with a regular expression should return `"object"`', () => {
       let result = typeOf(/typeof/);
-      expect(result).toBe('regexp');
+      expect(result).toBe('object');
     });
 
-    it('called with `RegExp` object should return `"regexp"`', () => {
+    it('called with `RegExp` object should return `"object"`', () => {
       let result = typeOf(new RegExp('.*\\..*'));
-      expect(result).toBe('regexp');
+      expect(result).toBe('object');
     });
 
     it('called with an empty string should return `"string"`', () => {
