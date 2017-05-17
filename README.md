@@ -2,6 +2,7 @@
 
 [![Build Status][travis-svg]][travis-url]
 [![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
 [![npm badge][npm-badge-png]][package-url]
 
@@ -29,6 +30,9 @@ npm install --save qc-type_of
 | new Number(...) | 'object' | 'number'  |
 | new String(...) | 'object' | 'string'  |
 
+
+[downloads-image]: http://img.shields.io/npm/dm/qc-type_of.svg
+[downloads-url]: http://npm-stat.com/charts.html?package=qc-type_of
 [license-image]: http://img.shields.io/npm/l/qc-type_of.svg
 [license-url]: LICENSE
 [npm-badge-png]: https://nodei.co/npm/qc-type_of.png?downloads=true&stars=true
