@@ -1,16 +1,18 @@
 # qc-type_of
 
-Yet another NPM package to improve upon JavaScript's `typeof` operator.
-
 [![Build Status][travis-svg]][travis-url]
 
 [![npm badge][npm-badge-png]][package-url]
+
+Yet another NPM package to improve upon JavaScript's `typeof` operator.
+
 
 ## Installation
 
 ```sh
 npm install --save qc-type_of
 ```
+
 
 ## Comparison with JavaScript's `typeof` Operator
 
