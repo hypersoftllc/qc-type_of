@@ -2,7 +2,7 @@
 
 Yet another NPM package to improve upon JavaScript's `typeof` operator.
 
-[![Build Status](https://travis-ci.org/hypersoftllc/qc-type_of.svg?branch=master)](https://travis-ci.org/hypersoftllc/qc-type_of)
+[![Build Status][travis-svg]][travis-url]
 
 
 ## Installation
@@ -24,3 +24,6 @@ npm install --save qc-type_of
 | null       | 'object'    | 'null'      |
 | new Number(...) | 'object' | 'number'  |
 | new String(...) | 'object' | 'string'  |
+
+[travis-svg]: https://travis-ci.org/hypersoftllc/qc-type_of.svg?branch=master
+[travis-url]: https://travis-ci.org/hypersoftllc/qc-type_of
