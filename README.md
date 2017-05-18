@@ -1,6 +1,7 @@
 # qc-type_of
 
 [![Build Status][travis-svg]][travis-url]
+[![Coverage Status][coverage-image]][coverage-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
 
@@ -31,6 +32,8 @@ npm install --save qc-type_of
 | new String(...) | 'object' | 'string'  |
 
 
+[coverage-image]: https://coveralls.io/repos/github/hypersoftllc/qc-type_of/badge.svg?branch=master
+[coverage-url]: https://coveralls.io/github/hypersoftllc/qc-type_of?branch=master
 [downloads-image]: http://img.shields.io/npm/dm/qc-type_of.svg
 [downloads-url]: http://npm-stat.com/charts.html?package=qc-type_of
 [license-image]: http://img.shields.io/npm/l/qc-type_of.svg
